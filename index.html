@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Budget Tracker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+    }
+
+    .overlay {
+      background-color: rgba(255,255,255,0.9);
+      min-height: 100vh;
+      padding: 30px;
+    }
+
+    .container {
+      background: white;
+      max-width: 600px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+
+    label {
+      display: block;
+      margin-top: 18px;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    button {
+      width: 48%;
+      padding: 12px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .income-btn {
+      background-color: #4CAF50;
+      color: white;
+      margin-right: 4%;
+    }
+
+    .expense-btn {
+      background-color: #FF6B6B;
+      color: white;
+    }
+
+    .saldo-box {
+      margin-top: 25px;
+      padding: 15px;
+      border-radius: 8px;
+      background-color: #f1f1f1;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .progress {
+      background-color: #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 15px;
+    }
+
+    .progress-fill {
+      background-color: #4CAF50;
+      height: 20px;
+      width: 0%;
+      transition: width 0.4s ease;
+    }
+
+    .progress-text {
+      text-align: center;
+      margin-top: 8px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <div class="container">
+      <h1>📊 Budget Tracker</h1>
+
+      <label for="target">🎯 Target Tabungan (Rp)</label>
+      <input type="number" id="target" placeholder="Misal: 10000000">
+
+      <label for="amount">💰 Jumlah</label>
+      <input type="number" id="amount" placeholder="Contoh: 50000">
+
+      <div style="display: flex; justify-content: space-between;">
+        <button class="income-btn" onclick="tambahPemasukan()">+ Pemasukan</button>
+        <button class="expense-btn" onclick="tambahPengeluaran()">- Pengeluaran</button>
+      </div>
+
+      <div class="saldo-box">
+        Saldo Sekarang: Rp <span id="saldo">0</span>
+      </div>
+
+      <div class="progress">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <div class="progress-text" id="progressText">Progress: 0%</div>
+    </div>
+  </div>
+
+  <script src="after.js"></script>
+</body>
+</html>
