@@ -60,3 +60,7 @@ AI membantu menghasilkan struktur fungsi utama, mempercepat proses logika keuang
 
 ## Cara Jalanin Kodingan 
 python -m http.server 8000, : http://localhost:8000
+
+
+
+https://github.com/zandiirfan37/UTS_Alpro
