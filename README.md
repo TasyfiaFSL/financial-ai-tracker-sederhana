@@ -58,3 +58,5 @@ Kode final yang digunakan untuk aplikasi web interaktif.
 ## Penggunaan AI
 AI membantu menghasilkan struktur fungsi utama, mempercepat proses logika keuangan dasar. Saya mengembangkan antarmuka dan fitur tambahan secara mandiri.
 
+## Cara Jalanin Kodingan 
+python -m http.server 8000, : http://localhost:8000
